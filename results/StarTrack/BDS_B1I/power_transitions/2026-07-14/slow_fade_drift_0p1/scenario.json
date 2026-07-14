@@ -1,0 +1,69 @@
+{
+    "id": "slow_fade_drift_0p1",
+    "title": "Slow deep fade with 0.1 Hz/s Doppler drift",
+    "description": "A gradual obstruction is combined with a continuous carrier drift to verify that stability gating preserves real dynamics.",
+    "software_under_test": "StarTrack",
+    "signal_source": "StarGen",
+    "signal": "BDS B1I",
+    "sample_rate_hz": 7680000,
+    "prn": 6,
+    "duration_s": 360,
+    "seed": 20260714,
+    "truth_doppler_hz": 4500.0,
+    "truth_code_phase_chips": 200.0,
+    "acquisition_doppler_hz": 4437.5,
+    "acquisition_code_phase_chips": 200.3,
+    "schedule_mode": "Linear",
+    "cn0_points": [
+        [
+            0,
+            40
+        ],
+        [
+            60,
+            40
+        ],
+        [
+            150,
+            10
+        ],
+        [
+            240,
+            10
+        ],
+        [
+            330,
+            40
+        ],
+        [
+            360,
+            40
+        ]
+    ],
+    "expectation": {
+        "final_state": "Track",
+        "max_state_commits": 8,
+        "tail_start_s": 340,
+        "max_tail_doppler_rms_hz": 5.0,
+        "max_tail_code_p95_chips": 0.2,
+        "sync_required": true,
+        "reacquisition_allowed": false,
+        "transport_faults_allowed": false,
+        "check_windows": [
+            {
+                "name": "dynamic_fade",
+                "start_s": 180,
+                "end_s": 240,
+                "max_doppler_rms_hz": 5.0,
+                "max_code_p95_chips": 0.2
+            },
+            {
+                "name": "dynamic_recovery",
+                "start_s": 340,
+                "end_s": 360,
+                "max_doppler_rms_hz": 5.0,
+                "max_code_p95_chips": 0.2
+            }
+        ]
+    }
+}

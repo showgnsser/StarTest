@@ -1,0 +1,54 @@
+{
+    "case_id": "steady_strong_40",
+    "passed": true,
+    "checks": {
+        "process_exit": true,
+        "sync_acquired": true,
+        "no_transport_fault": true,
+        "no_reacquisition": true,
+        "no_sync_loss_after_track": true,
+        "final_state": true,
+        "bounded_state_changes": true,
+        "tail_doppler": true,
+        "tail_code": true,
+        "window_strong_hold": true
+    },
+    "wall_time_s": 10.113987900000211,
+    "generator_exit_code": 0,
+    "tracker_exit_code": 0,
+    "sampled_rows": 91,
+    "sync_time_s": 1.22,
+    "final_state": "Track",
+    "state_commit_count": 3,
+    "state_path": [
+        "Lock",
+        "Sync",
+        "Track"
+    ],
+    "windows": [
+        {
+            "name": "strong_hold",
+            "start_s": 60,
+            "end_s": 90,
+            "sample_count": 31,
+            "states": [
+                "Track"
+            ],
+            "doppler_rms_hz": 0.04089340887862544,
+            "doppler_p95_hz": 0.07065134,
+            "code_mae_chips": 0.0016114551612903224,
+            "code_p95_chips": 0.00355245,
+            "max_doppler_rms_hz": 5.0,
+            "max_code_p95_chips": 0.1,
+            "passed": true
+        }
+    ],
+    "transport_fault_count": 0,
+    "tail_start_s": 60,
+    "tail_doppler_rms_hz": 0.04089340887862544,
+    "tail_doppler_p95_hz": 0.07065134,
+    "tail_code_mae_chips": 0.0016114551612903224,
+    "tail_code_p95_chips": 0.00355245,
+    "cn0_error_mean_db": -0.5264065782222223,
+    "cn0_error_p95_abs_db": 1.0155376800000013
+}

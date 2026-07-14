@@ -1,0 +1,8 @@
+﻿time_s,event,from_state,to_state
+1.22000000,SyncLocked,PullIn,PullIn
+9.42000000,StateRequested,PullIn,Lock
+9.44000000,StateCommitted,PullIn,Lock
+19.42000000,StateRequested,Lock,Sync
+19.44000000,StateCommitted,Lock,Sync
+29.92000000,StateRequested,Sync,Track
+29.94000000,StateCommitted,Sync,Track

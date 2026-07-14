@@ -1,0 +1,92 @@
+{
+    "id": "repeated_slow_fades",
+    "title": "Two repeated slow obstruction cycles",
+    "description": "Two deterministic attenuation and recovery cycles verify repeatability and absence of state chatter.",
+    "software_under_test": "StarTrack",
+    "signal_source": "StarGen",
+    "signal": "BDS B1I",
+    "sample_rate_hz": 7680000,
+    "prn": 6,
+    "duration_s": 450,
+    "seed": 20260714,
+    "truth_doppler_hz": 4500.0,
+    "truth_code_phase_chips": 200.0,
+    "acquisition_doppler_hz": 4437.5,
+    "acquisition_code_phase_chips": 200.3,
+    "schedule_mode": "Linear",
+    "cn0_points": [
+        [
+            0,
+            40
+        ],
+        [
+            60,
+            40
+        ],
+        [
+            120,
+            12
+        ],
+        [
+            150,
+            12
+        ],
+        [
+            210,
+            40
+        ],
+        [
+            240,
+            40
+        ],
+        [
+            300,
+            12
+        ],
+        [
+            330,
+            12
+        ],
+        [
+            390,
+            40
+        ],
+        [
+            450,
+            40
+        ]
+    ],
+    "expectation": {
+        "final_state": "Track",
+        "max_state_commits": 12,
+        "tail_start_s": 410,
+        "max_tail_doppler_rms_hz": 5.0,
+        "max_tail_code_p95_chips": 0.15,
+        "sync_required": true,
+        "reacquisition_allowed": false,
+        "transport_faults_allowed": false,
+        "check_windows": [
+            {
+                "name": "first_fade",
+                "start_s": 125,
+                "end_s": 150,
+                "max_doppler_rms_hz": 5.0,
+                "max_code_p95_chips": 0.2
+            },
+            {
+                "name": "second_fade",
+                "start_s": 305,
+                "end_s": 330,
+                "max_doppler_rms_hz": 5.0,
+                "max_code_p95_chips": 0.2
+            },
+            {
+                "name": "recovered",
+                "start_s": 410,
+                "end_s": 450,
+                "max_doppler_rms_hz": 5.0,
+                "max_code_p95_chips": 0.15
+            }
+        ]
+    }
+}

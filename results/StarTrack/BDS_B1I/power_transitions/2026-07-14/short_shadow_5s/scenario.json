@@ -1,0 +1,57 @@
+{
+    "id": "short_shadow_5s",
+    "title": "Five-second short obstruction",
+    "description": "A brief 10 dB-Hz shadow tests whether confirmation timers prevent unnecessary loss of synchronization or reacquisition.",
+    "software_under_test": "StarTrack",
+    "signal_source": "StarGen",
+    "signal": "BDS B1I",
+    "sample_rate_hz": 7680000,
+    "prn": 6,
+    "duration_s": 150,
+    "seed": 20260714,
+    "truth_doppler_hz": 4500.0,
+    "truth_code_phase_chips": 200.0,
+    "acquisition_doppler_hz": 4437.5,
+    "acquisition_code_phase_chips": 200.3,
+    "schedule_mode": "Step",
+    "cn0_points": [
+        [
+            0,
+            40
+        ],
+        [
+            60,
+            10
+        ],
+        [
+            65,
+            40
+        ]
+    ],
+    "expectation": {
+        "final_state": "Track",
+        "max_state_commits": 6,
+        "tail_start_s": 100,
+        "max_tail_doppler_rms_hz": 5.0,
+        "max_tail_code_p95_chips": 0.15,
+        "sync_required": true,
+        "reacquisition_allowed": false,
+        "transport_faults_allowed": false,
+        "check_windows": [
+            {
+                "name": "short_shadow",
+                "start_s": 60,
+                "end_s": 65,
+                "max_doppler_rms_hz": 10.0,
+                "max_code_p95_chips": 0.2
+            },
+            {
+                "name": "recovered",
+                "start_s": 100,
+                "end_s": 150,
+                "max_doppler_rms_hz": 5.0,
+                "max_code_p95_chips": 0.15
+            }
+        ]
+    }
+}

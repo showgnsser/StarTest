@@ -1,0 +1,73 @@
+{
+    "case_id": "slow_fade_drift_0p1",
+    "passed": true,
+    "checks": {
+        "process_exit": true,
+        "sync_acquired": true,
+        "no_transport_fault": true,
+        "no_reacquisition": true,
+        "no_sync_loss_after_track": true,
+        "final_state": true,
+        "bounded_state_changes": true,
+        "tail_doppler": true,
+        "tail_code": true,
+        "window_dynamic_fade": true,
+        "window_dynamic_recovery": true
+    },
+    "wall_time_s": 38.98764670000037,
+    "generator_exit_code": 0,
+    "tracker_exit_code": 0,
+    "sampled_rows": 361,
+    "sync_time_s": 1.22,
+    "final_state": "Track",
+    "state_commit_count": 5,
+    "state_path": [
+        "Lock",
+        "Sync",
+        "Track",
+        "Weak",
+        "Track"
+    ],
+    "windows": [
+        {
+            "name": "dynamic_fade",
+            "start_s": 180,
+            "end_s": 240,
+            "sample_count": 61,
+            "states": [
+                "Weak"
+            ],
+            "doppler_rms_hz": 2.1044611805902194,
+            "doppler_p95_hz": 2.70982131,
+            "code_mae_chips": 0.07525086278688525,
+            "code_p95_chips": 0.14133094,
+            "max_doppler_rms_hz": 5.0,
+            "max_code_p95_chips": 0.2,
+            "passed": true
+        },
+        {
+            "name": "dynamic_recovery",
+            "start_s": 340,
+            "end_s": 360,
+            "sample_count": 21,
+            "states": [
+                "Track"
+            ],
+            "doppler_rms_hz": 0.03145549325967595,
+            "doppler_p95_hz": 0.04102217,
+            "code_mae_chips": 0.0013776685714285714,
+            "code_p95_chips": 0.00279326,
+            "max_doppler_rms_hz": 5.0,
+            "max_code_p95_chips": 0.2,
+            "passed": true
+        }
+    ],
+    "transport_fault_count": 0,
+    "tail_start_s": 340,
+    "tail_doppler_rms_hz": 0.03145549325967595,
+    "tail_doppler_p95_hz": 0.04102217,
+    "tail_code_mae_chips": 0.0013776685714285714,
+    "tail_code_p95_chips": 0.00279326,
+    "cn0_error_mean_db": -0.7692504129444445,
+    "cn0_error_p95_abs_db": 2.6420279100000013
+}

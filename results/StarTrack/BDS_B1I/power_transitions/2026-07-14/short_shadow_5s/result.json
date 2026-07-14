@@ -1,0 +1,71 @@
+{
+    "case_id": "short_shadow_5s",
+    "passed": true,
+    "checks": {
+        "process_exit": true,
+        "sync_acquired": true,
+        "no_transport_fault": true,
+        "no_reacquisition": true,
+        "no_sync_loss_after_track": true,
+        "final_state": true,
+        "bounded_state_changes": true,
+        "tail_doppler": true,
+        "tail_code": true,
+        "window_short_shadow": true,
+        "window_recovered": true
+    },
+    "wall_time_s": 16.417065399999956,
+    "generator_exit_code": 0,
+    "tracker_exit_code": 0,
+    "sampled_rows": 151,
+    "sync_time_s": 1.22,
+    "final_state": "Track",
+    "state_commit_count": 3,
+    "state_path": [
+        "Lock",
+        "Sync",
+        "Track"
+    ],
+    "windows": [
+        {
+            "name": "short_shadow",
+            "start_s": 60,
+            "end_s": 65,
+            "sample_count": 6,
+            "states": [
+                "Track"
+            ],
+            "doppler_rms_hz": 0.22333100437797768,
+            "doppler_p95_hz": 0.38118314,
+            "code_mae_chips": 0.007111436666666668,
+            "code_p95_chips": 0.01834975,
+            "max_doppler_rms_hz": 10.0,
+            "max_code_p95_chips": 0.2,
+            "passed": true
+        },
+        {
+            "name": "recovered",
+            "start_s": 100,
+            "end_s": 150,
+            "sample_count": 51,
+            "states": [
+                "Track"
+            ],
+            "doppler_rms_hz": 0.03197687330494018,
+            "doppler_p95_hz": 0.05089585,
+            "code_mae_chips": 0.0024835988235294114,
+            "code_p95_chips": 0.00686759,
+            "max_doppler_rms_hz": 5.0,
+            "max_code_p95_chips": 0.15,
+            "passed": true
+        }
+    ],
+    "transport_fault_count": 0,
+    "tail_start_s": 100,
+    "tail_doppler_rms_hz": 0.03197687330494018,
+    "tail_doppler_p95_hz": 0.05089585,
+    "tail_code_mae_chips": 0.0024835988235294114,
+    "tail_code_p95_chips": 0.00686759,
+    "cn0_error_mean_db": 0.03995557093333325,
+    "cn0_error_p95_abs_db": 2.433991489999997
+}

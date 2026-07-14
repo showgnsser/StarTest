@@ -1,0 +1,150 @@
+{
+    "suite_id": "b1i-power-transitions-v1",
+    "software_under_test": "StarTrack",
+    "signal_source": "StarGen",
+    "signal": "BDS B1I",
+    "sample_rate_hz": 7680000,
+    "if_hz": 0,
+    "prn": 6,
+    "truth_doppler_hz": 4500.0,
+    "truth_code_phase_chips": 200.0,
+    "acquisition_doppler_hz": 4437.5,
+    "acquisition_code_phase_chips": 200.3,
+    "seed": 20260714,
+    "scenarios": [
+        {
+            "id": "steady_strong_40",
+            "title": "40 dB-Hz strong-signal baseline",
+            "description": "A stable open-sky signal verifies acquisition handoff and the normal steady state before fade testing.",
+            "duration_s": 90,
+            "schedule_mode": "Step",
+            "cn0_points": [[0, 40]],
+            "expected_final_state": "Track",
+            "expected_max_commits": 4,
+            "check_windows": [
+                {"name": "strong_hold", "start_s": 60, "end_s": 90,
+                 "max_doppler_rms_hz": 5.0, "max_code_p95_chips": 0.10}
+            ],
+            "tail_start_s": 60,
+            "max_tail_doppler_rms_hz": 5.0,
+            "max_tail_code_p95_chips": 0.10
+        },
+        {
+            "id": "step_deep_fade",
+            "title": "Abrupt deep fade and recovery",
+            "description": "The signal drops from 40 to 10 dB-Hz, remains obstructed, and returns abruptly to 40 dB-Hz.",
+            "duration_s": 220,
+            "schedule_mode": "Step",
+            "cn0_points": [[0, 40], [60, 10], [140, 40]],
+            "expected_final_state": "Track",
+            "expected_max_commits": 8,
+            "check_windows": [
+                {"name": "deep_fade", "start_s": 80, "end_s": 130,
+                 "max_doppler_rms_hz": 5.0, "max_code_p95_chips": 0.20},
+                {"name": "recovered", "start_s": 180, "end_s": 220,
+                 "max_doppler_rms_hz": 5.0, "max_code_p95_chips": 0.15}
+            ],
+            "tail_start_s": 180,
+            "max_tail_doppler_rms_hz": 5.0,
+            "max_tail_code_p95_chips": 0.15
+        },
+        {
+            "id": "slow_deep_fade",
+            "title": "Slow deep fade and slow recovery",
+            "description": "A 120-second attenuation ramp models gradual obstruction, followed by a long weak hold and a 120-second recovery ramp.",
+            "duration_s": 480,
+            "schedule_mode": "Linear",
+            "cn0_points": [[0, 40], [60, 40], [180, 10], [300, 10], [420, 40], [480, 40]],
+            "expected_final_state": "Track",
+            "expected_max_commits": 8,
+            "check_windows": [
+                {"name": "deep_fade", "start_s": 200, "end_s": 300,
+                 "max_doppler_rms_hz": 5.0, "max_code_p95_chips": 0.20},
+                {"name": "recovered", "start_s": 440, "end_s": 480,
+                 "max_doppler_rms_hz": 5.0, "max_code_p95_chips": 0.15}
+            ],
+            "tail_start_s": 440,
+            "max_tail_doppler_rms_hz": 5.0,
+            "max_tail_code_p95_chips": 0.15
+        },
+        {
+            "id": "short_shadow_5s",
+            "title": "Five-second short obstruction",
+            "description": "A brief 10 dB-Hz shadow tests whether confirmation timers prevent unnecessary loss of synchronization or reacquisition.",
+            "duration_s": 150,
+            "schedule_mode": "Step",
+            "cn0_points": [[0, 40], [60, 10], [65, 40]],
+            "expected_final_state": "Track",
+            "expected_max_commits": 6,
+            "check_windows": [
+                {"name": "short_shadow", "start_s": 60, "end_s": 65,
+                 "max_doppler_rms_hz": 10.0, "max_code_p95_chips": 0.20},
+                {"name": "recovered", "start_s": 100, "end_s": 150,
+                 "max_doppler_rms_hz": 5.0, "max_code_p95_chips": 0.15}
+            ],
+            "tail_start_s": 100,
+            "max_tail_doppler_rms_hz": 5.0,
+            "max_tail_code_p95_chips": 0.15
+        },
+        {
+            "id": "threshold_ramp",
+            "title": "Slow variation around the weak-signal boundary",
+            "description": "The signal slowly crosses the weak-signal region and then recovers, exercising state hysteresis without rapid power steps.",
+            "duration_s": 480,
+            "schedule_mode": "Linear",
+            "cn0_points": [[0, 40], [60, 40], [150, 17], [210, 17], [300, 23], [360, 23], [420, 40], [480, 40]],
+            "expected_final_state": "Track",
+            "expected_max_commits": 8,
+            "check_windows": [
+                {"name": "boundary_hold", "start_s": 170, "end_s": 280,
+                 "max_doppler_rms_hz": 5.0, "max_code_p95_chips": 0.20},
+                {"name": "recovered", "start_s": 440, "end_s": 480,
+                 "max_doppler_rms_hz": 5.0, "max_code_p95_chips": 0.15}
+            ],
+            "tail_start_s": 440,
+            "max_tail_doppler_rms_hz": 5.0,
+            "max_tail_code_p95_chips": 0.15
+        },
+        {
+            "id": "repeated_slow_fades",
+            "title": "Two repeated slow obstruction cycles",
+            "description": "Two deterministic attenuation and recovery cycles verify repeatability and absence of state chatter.",
+            "duration_s": 450,
+            "schedule_mode": "Linear",
+            "cn0_points": [[0, 40], [60, 40], [120, 12], [150, 12], [210, 40], [240, 40], [300, 12], [330, 12], [390, 40], [450, 40]],
+            "expected_final_state": "Track",
+            "expected_max_commits": 12,
+            "check_windows": [
+                {"name": "first_fade", "start_s": 125, "end_s": 150,
+                 "max_doppler_rms_hz": 5.0, "max_code_p95_chips": 0.20},
+                {"name": "second_fade", "start_s": 305, "end_s": 330,
+                 "max_doppler_rms_hz": 5.0, "max_code_p95_chips": 0.20},
+                {"name": "recovered", "start_s": 410, "end_s": 450,
+                 "max_doppler_rms_hz": 5.0, "max_code_p95_chips": 0.15}
+            ],
+            "tail_start_s": 410,
+            "max_tail_doppler_rms_hz": 5.0,
+            "max_tail_code_p95_chips": 0.15
+        },
+        {
+            "id": "slow_fade_drift_0p1",
+            "title": "Slow deep fade with 0.1 Hz/s Doppler drift",
+            "description": "A gradual obstruction is combined with a continuous carrier drift to verify that stability gating preserves real dynamics.",
+            "duration_s": 360,
+            "doppler_rate_hz_s": 0.1,
+            "schedule_mode": "Linear",
+            "cn0_points": [[0, 40], [60, 40], [150, 10], [240, 10], [330, 40], [360, 40]],
+            "expected_final_state": "Track",
+            "expected_max_commits": 8,
+            "check_windows": [
+                {"name": "dynamic_fade", "start_s": 180, "end_s": 240,
+                 "max_doppler_rms_hz": 5.0, "max_code_p95_chips": 0.20},
+                {"name": "dynamic_recovery", "start_s": 340, "end_s": 360,
+                 "max_doppler_rms_hz": 5.0, "max_code_p95_chips": 0.20}
+            ],
+            "tail_start_s": 340,
+            "max_tail_doppler_rms_hz": 5.0,
+            "max_tail_code_p95_chips": 0.20
+        }
+    ]
+}
