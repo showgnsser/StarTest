@@ -1,0 +1,12 @@
+time_s,frame_id,event,from_state,to_state,command_id
+0.56000000,28,SyncLocked,PullIn,PullIn,28
+6.70000000,335,StateRequested,PullIn,Lock,336
+6.72000000,336,StateCommitted,PullIn,Lock,336
+8.10000000,405,StateRequested,Lock,Strong,406
+8.12000000,406,StateCommitted,Lock,Strong,406
+15.68000000,784,StateRequested,Strong,LongFast,785
+15.70000000,785,StateCommitted,Strong,LongFast,785
+19.04000000,952,StateRequested,LongFast,LongLock,953
+19.06000000,953,StateCommitted,LongFast,LongLock,953
+22.24000000,1112,StateRequested,LongLock,Medium,1113
+22.26000000,1113,StateCommitted,LongLock,Medium,1113

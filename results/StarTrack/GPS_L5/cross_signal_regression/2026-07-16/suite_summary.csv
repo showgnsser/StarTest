@@ -1,0 +1,5 @@
+case,duration_s,seed,cn0_profile_db_hz,acq_freq_error_hz,acq_code_error_chips,result,freq_rms_hz,code_p95_chips,metric_window_s
+strong_40_30s,30,20260716,40,31.25,0.3,PASS,0.0915,0.01979,10-30
+pullin_28_60s,60,20260717,28,31.25,0.3,PASS,0.1312,0.00915,45-60
+transition_40_12_40_210s,210,20260716,linear_40_24_16_12_24_40,31.25,0.3,PASS,0.1033,0.00577,180-210
+slowfade_40_10_40_900s,900,20260718,linear_40_28_10_28_40,31.25,0.3,FAIL,166.6502,413.91350,840-900

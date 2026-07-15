@@ -1,0 +1,20 @@
+{
+  "suite": "gps_l5_cross_signal_regression",
+  "date": "2026-07-16",
+  "input_mode": "StarGen binary realtime pipe",
+  "signal": "GPS L5 PRN6",
+  "sample_rate_hz": 30720000,
+  "frontend_bandwidth_hz": 20460000,
+  "doppler_model": {
+    "initial_hz": 4500.0,
+    "rate_hz_s": 0.020,
+    "sine_amplitude_hz": 0.5,
+    "sine_period_s": 120.0
+  },
+  "cases": [
+    "strong_40_30s",
+    "pullin_28_60s",
+    "transition_40_12_40_210s",
+    "slowfade_40_10_40_900s"
+  ]
+}

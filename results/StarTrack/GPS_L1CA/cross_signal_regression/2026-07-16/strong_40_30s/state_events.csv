@@ -1,0 +1,6 @@
+time_s,frame_id,event,from_state,to_state,command_id
+1.32000000,66,SyncLocked,PullIn,PullIn,66
+2.18000000,109,StateRequested,PullIn,Lock,110
+2.20000000,110,StateCommitted,PullIn,Lock,110
+3.26000000,163,StateRequested,Lock,Strong,164
+3.28000000,164,StateCommitted,Lock,Strong,164

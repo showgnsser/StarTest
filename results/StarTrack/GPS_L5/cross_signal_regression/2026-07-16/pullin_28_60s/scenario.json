@@ -1,0 +1,1 @@
+{"signal":"GPS L5","prn":6,"duration_s":60,"seed":20260717,"cn0_db_hz":28,"sample_rate_hz":30720000,"acquisition":{"doppler_hz":4468.75,"code_phase_chips":200.3},"truth":{"doppler_hz":4500.0,"doppler_rate_hz_s":0.020,"doppler_sine_amplitude_hz":0.5,"doppler_sine_period_s":120.0,"code_phase_chips":200.0},"acceptance":"pull in from +31.25 Hz and +0.3 chip without reacquisition"}
