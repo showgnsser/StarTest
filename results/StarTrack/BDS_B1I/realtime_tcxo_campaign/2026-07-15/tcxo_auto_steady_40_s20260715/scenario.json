@@ -1,0 +1,32 @@
+{
+    "id": "tcxo_auto_steady_40_s20260715",
+    "title": "40 dB-Hz steady strong signal",
+    "description": "Verify stable acquisition handoff and long strong-signal tracking.",
+    "software_under_test": "StarTrack",
+    "signal_source": "StarGen realtime binary pipe",
+    "signal": "BDS B1I D1",
+    "sample_rate_hz": 7680000,
+    "if_hz": 0,
+    "prn": 6,
+    "duration_s": 900.0,
+    "seed": 20260715,
+    "truth_initial_doppler_hz": 4500.0,
+    "truth_initial_code_phase_chips": 200.0,
+    "acquisition_doppler_hz": 4437.5,
+    "acquisition_code_phase_chips": 200.3,
+    "doppler_rate_hz_s": 0.02,
+    "doppler_sine_amplitude_hz": 0.5,
+    "doppler_sine_period_s": 120.0,
+    "external_carrier_aid_rate_hz_s": 0.0,
+    "known_navigation_bits": false,
+    "initial_state": "PullIn",
+    "automatic_transitions": true,
+    "cn0_schedule_mode": "Step",
+    "cn0_points": [
+        {
+            "time_s": 0.0,
+            "cn0_db_hz": 40.0
+        }
+    ],
+    "expectation": "Remain stable without reacquisition; tail frequency P95 <= 5 Hz and code P95 <= 0.2 chip."
+}

@@ -1,0 +1,32 @@
+{
+    "id": "tcxo_hold_medium_24_s20260715",
+    "title": "24 dB-Hz medium-signal hold",
+    "description": "Measure the long-term stability of the medium-signal operating range.",
+    "software_under_test": "StarTrack",
+    "signal_source": "StarGen realtime binary pipe",
+    "signal": "BDS B1I D1",
+    "sample_rate_hz": 7680000,
+    "if_hz": 0,
+    "prn": 6,
+    "duration_s": 900.0,
+    "seed": 20260715,
+    "truth_initial_doppler_hz": 4500.0,
+    "truth_initial_code_phase_chips": 200.0,
+    "acquisition_doppler_hz": 4500.1,
+    "acquisition_code_phase_chips": 200.05,
+    "doppler_rate_hz_s": 0.02,
+    "doppler_sine_amplitude_hz": 0.5,
+    "doppler_sine_period_s": 120.0,
+    "external_carrier_aid_rate_hz_s": 0.0,
+    "known_navigation_bits": false,
+    "initial_state": "Medium",
+    "automatic_transitions": false,
+    "cn0_schedule_mode": "Step",
+    "cn0_points": [
+        {
+            "time_s": 0.0,
+            "cn0_db_hz": 24.0
+        }
+    ],
+    "expectation": "Track for 900 s without divergence; tail frequency P95 <= 5 Hz and code P95 <= 0.2 chip."
+}

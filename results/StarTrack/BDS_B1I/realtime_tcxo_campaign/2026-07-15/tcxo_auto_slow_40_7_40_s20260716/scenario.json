@@ -1,0 +1,48 @@
+{
+    "id": "tcxo_auto_slow_40_7_40_s20260716",
+    "title": "Slow 40 to 7 to 40 dB-Hz fade",
+    "description": "Model gradual obstruction and recovery with three deterministic seeds.",
+    "software_under_test": "StarTrack",
+    "signal_source": "StarGen realtime binary pipe",
+    "signal": "BDS B1I D1",
+    "sample_rate_hz": 7680000,
+    "if_hz": 0,
+    "prn": 6,
+    "duration_s": 900.0,
+    "seed": 20260716,
+    "truth_initial_doppler_hz": 4500.0,
+    "truth_initial_code_phase_chips": 200.0,
+    "acquisition_doppler_hz": 4437.5,
+    "acquisition_code_phase_chips": 200.3,
+    "doppler_rate_hz_s": 0.02,
+    "doppler_sine_amplitude_hz": 0.5,
+    "doppler_sine_period_s": 120.0,
+    "external_carrier_aid_rate_hz_s": 0.015,
+    "known_navigation_bits": true,
+    "initial_state": "PullIn",
+    "automatic_transitions": true,
+    "cn0_schedule_mode": "Linear",
+    "cn0_points": [
+        {
+            "time_s": 0.0,
+            "cn0_db_hz": 40.0
+        },
+        {
+            "time_s": 120.0,
+            "cn0_db_hz": 40.0
+        },
+        {
+            "time_s": 360.0,
+            "cn0_db_hz": 7.0
+        },
+        {
+            "time_s": 540.0,
+            "cn0_db_hz": 7.0
+        },
+        {
+            "time_s": 780.0,
+            "cn0_db_hz": 40.0
+        }
+    ],
+    "expectation": "No reacquisition or state chatter; stable tracking through the fade and recovery."
+}

@@ -1,0 +1,34 @@
+{
+    "status": "FAIL",
+    "tracking_passed": false,
+    "cn0_monitor_passed": false,
+    "duration_s": 900.0,
+    "wall_time_s": 240.5460000000021,
+    "realtime_ratio": 3.7414881145393903,
+    "tail": {
+        "doppler_rms_hz": 77.06443527004977,
+        "doppler_p95_hz": 97.19696946,
+        "doppler_max_hz": 99.17452513,
+        "code_mae_chips": 26.847436077043188,
+        "code_p95_chips": 40.58744966,
+        "code_max_chips": 42.46274907,
+        "fll_lock_ratio": 1.0,
+        "dll_lock_ratio": 1.0,
+        "frame_valid_ratio": 1.0,
+        "cn0_bias_db": -8.446063102435897,
+        "cn0_rmse_db": 9.289595501248808,
+        "cn0_p95_abs_db": 15.356617745,
+        "cn0_valid_ratio": 0.5182724252491694,
+        "cn0_methods": {
+            "NWPR": 156
+        },
+        "states": {
+            "Deep": 301
+        }
+    },
+    "state_path": "Deep",
+    "state_transitions": [],
+    "cn0_step_responses": [],
+    "fallback_to_pullin_count": 0,
+    "transition_divergence_count": 0
+}

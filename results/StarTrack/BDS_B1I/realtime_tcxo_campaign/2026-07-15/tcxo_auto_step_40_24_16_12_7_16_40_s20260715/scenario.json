@@ -1,0 +1,56 @@
+{
+    "id": "tcxo_auto_step_40_24_16_12_7_16_40_s20260715",
+    "title": "Abrupt multi-level attenuation and recovery",
+    "description": "Verify state transitions and recovery across strong, medium, weak and deep signal levels.",
+    "software_under_test": "StarTrack",
+    "signal_source": "StarGen realtime binary pipe",
+    "signal": "BDS B1I D1",
+    "sample_rate_hz": 7680000,
+    "if_hz": 0,
+    "prn": 6,
+    "duration_s": 900.0,
+    "seed": 20260715,
+    "truth_initial_doppler_hz": 4500.0,
+    "truth_initial_code_phase_chips": 200.0,
+    "acquisition_doppler_hz": 4437.5,
+    "acquisition_code_phase_chips": 200.3,
+    "doppler_rate_hz_s": 0.02,
+    "doppler_sine_amplitude_hz": 0.5,
+    "doppler_sine_period_s": 120.0,
+    "external_carrier_aid_rate_hz_s": 0.015,
+    "known_navigation_bits": true,
+    "initial_state": "PullIn",
+    "automatic_transitions": true,
+    "cn0_schedule_mode": "Step",
+    "cn0_points": [
+        {
+            "time_s": 0.0,
+            "cn0_db_hz": 40.0
+        },
+        {
+            "time_s": 120.0,
+            "cn0_db_hz": 24.0
+        },
+        {
+            "time_s": 240.0,
+            "cn0_db_hz": 16.0
+        },
+        {
+            "time_s": 360.0,
+            "cn0_db_hz": 12.0
+        },
+        {
+            "time_s": 480.0,
+            "cn0_db_hz": 7.0
+        },
+        {
+            "time_s": 660.0,
+            "cn0_db_hz": 16.0
+        },
+        {
+            "time_s": 780.0,
+            "cn0_db_hz": 40.0
+        }
+    ],
+    "expectation": "No reacquisition, no transition divergence, and stable recovery to the strong-signal state."
+}

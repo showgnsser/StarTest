@@ -1,0 +1,590 @@
+{
+    "suite_id": "b1i-realtime-tcxo-900s-v1",
+    "published_date": "2026-07-15",
+    "software_under_test": "StarTrack",
+    "signal_source": "StarGen realtime binary pipe",
+    "signal": "BDS B1I D1",
+    "case_count": 15,
+    "cases": [
+        {
+            "id": "tcxo_auto_slow_40_7_40_s20260715",
+            "title": "Slow 40 to 7 to 40 dB-Hz fade",
+            "description": "Model gradual obstruction and recovery with three deterministic seeds.",
+            "software_under_test": "StarTrack",
+            "signal_source": "StarGen realtime binary pipe",
+            "signal": "BDS B1I D1",
+            "sample_rate_hz": 7680000,
+            "if_hz": 0,
+            "prn": 6,
+            "duration_s": 900.0,
+            "seed": 20260715,
+            "truth_initial_doppler_hz": 4500.0,
+            "truth_initial_code_phase_chips": 200.0,
+            "acquisition_doppler_hz": 4437.5,
+            "acquisition_code_phase_chips": 200.3,
+            "doppler_rate_hz_s": 0.02,
+            "doppler_sine_amplitude_hz": 0.5,
+            "doppler_sine_period_s": 120.0,
+            "external_carrier_aid_rate_hz_s": 0.015,
+            "known_navigation_bits": true,
+            "initial_state": "PullIn",
+            "automatic_transitions": true,
+            "cn0_schedule_mode": "Linear",
+            "cn0_points": [
+                {
+                    "time_s": 0.0,
+                    "cn0_db_hz": 40.0
+                },
+                {
+                    "time_s": 120.0,
+                    "cn0_db_hz": 40.0
+                },
+                {
+                    "time_s": 360.0,
+                    "cn0_db_hz": 7.0
+                },
+                {
+                    "time_s": 540.0,
+                    "cn0_db_hz": 7.0
+                },
+                {
+                    "time_s": 780.0,
+                    "cn0_db_hz": 40.0
+                }
+            ],
+            "expectation": "No reacquisition or state chatter; stable tracking through the fade and recovery."
+        },
+        {
+            "id": "tcxo_auto_slow_40_7_40_s20260716",
+            "title": "Slow 40 to 7 to 40 dB-Hz fade",
+            "description": "Model gradual obstruction and recovery with three deterministic seeds.",
+            "software_under_test": "StarTrack",
+            "signal_source": "StarGen realtime binary pipe",
+            "signal": "BDS B1I D1",
+            "sample_rate_hz": 7680000,
+            "if_hz": 0,
+            "prn": 6,
+            "duration_s": 900.0,
+            "seed": 20260716,
+            "truth_initial_doppler_hz": 4500.0,
+            "truth_initial_code_phase_chips": 200.0,
+            "acquisition_doppler_hz": 4437.5,
+            "acquisition_code_phase_chips": 200.3,
+            "doppler_rate_hz_s": 0.02,
+            "doppler_sine_amplitude_hz": 0.5,
+            "doppler_sine_period_s": 120.0,
+            "external_carrier_aid_rate_hz_s": 0.015,
+            "known_navigation_bits": true,
+            "initial_state": "PullIn",
+            "automatic_transitions": true,
+            "cn0_schedule_mode": "Linear",
+            "cn0_points": [
+                {
+                    "time_s": 0.0,
+                    "cn0_db_hz": 40.0
+                },
+                {
+                    "time_s": 120.0,
+                    "cn0_db_hz": 40.0
+                },
+                {
+                    "time_s": 360.0,
+                    "cn0_db_hz": 7.0
+                },
+                {
+                    "time_s": 540.0,
+                    "cn0_db_hz": 7.0
+                },
+                {
+                    "time_s": 780.0,
+                    "cn0_db_hz": 40.0
+                }
+            ],
+            "expectation": "No reacquisition or state chatter; stable tracking through the fade and recovery."
+        },
+        {
+            "id": "tcxo_auto_slow_40_7_40_s20260717",
+            "title": "Slow 40 to 7 to 40 dB-Hz fade",
+            "description": "Model gradual obstruction and recovery with three deterministic seeds.",
+            "software_under_test": "StarTrack",
+            "signal_source": "StarGen realtime binary pipe",
+            "signal": "BDS B1I D1",
+            "sample_rate_hz": 7680000,
+            "if_hz": 0,
+            "prn": 6,
+            "duration_s": 900.0,
+            "seed": 20260717,
+            "truth_initial_doppler_hz": 4500.0,
+            "truth_initial_code_phase_chips": 200.0,
+            "acquisition_doppler_hz": 4437.5,
+            "acquisition_code_phase_chips": 200.3,
+            "doppler_rate_hz_s": 0.02,
+            "doppler_sine_amplitude_hz": 0.5,
+            "doppler_sine_period_s": 120.0,
+            "external_carrier_aid_rate_hz_s": 0.015,
+            "known_navigation_bits": true,
+            "initial_state": "PullIn",
+            "automatic_transitions": true,
+            "cn0_schedule_mode": "Linear",
+            "cn0_points": [
+                {
+                    "time_s": 0.0,
+                    "cn0_db_hz": 40.0
+                },
+                {
+                    "time_s": 120.0,
+                    "cn0_db_hz": 40.0
+                },
+                {
+                    "time_s": 360.0,
+                    "cn0_db_hz": 7.0
+                },
+                {
+                    "time_s": 540.0,
+                    "cn0_db_hz": 7.0
+                },
+                {
+                    "time_s": 780.0,
+                    "cn0_db_hz": 40.0
+                }
+            ],
+            "expectation": "No reacquisition or state chatter; stable tracking through the fade and recovery."
+        },
+        {
+            "id": "tcxo_auto_steady_40_s20260715",
+            "title": "40 dB-Hz steady strong signal",
+            "description": "Verify stable acquisition handoff and long strong-signal tracking.",
+            "software_under_test": "StarTrack",
+            "signal_source": "StarGen realtime binary pipe",
+            "signal": "BDS B1I D1",
+            "sample_rate_hz": 7680000,
+            "if_hz": 0,
+            "prn": 6,
+            "duration_s": 900.0,
+            "seed": 20260715,
+            "truth_initial_doppler_hz": 4500.0,
+            "truth_initial_code_phase_chips": 200.0,
+            "acquisition_doppler_hz": 4437.5,
+            "acquisition_code_phase_chips": 200.3,
+            "doppler_rate_hz_s": 0.02,
+            "doppler_sine_amplitude_hz": 0.5,
+            "doppler_sine_period_s": 120.0,
+            "external_carrier_aid_rate_hz_s": 0.0,
+            "known_navigation_bits": false,
+            "initial_state": "PullIn",
+            "automatic_transitions": true,
+            "cn0_schedule_mode": "Step",
+            "cn0_points": [
+                {
+                    "time_s": 0.0,
+                    "cn0_db_hz": 40.0
+                }
+            ],
+            "expectation": "Remain stable without reacquisition; tail frequency P95 <= 5 Hz and code P95 <= 0.2 chip."
+        },
+        {
+            "id": "tcxo_auto_step_40_24_16_12_7_16_40_s20260715",
+            "title": "Abrupt multi-level attenuation and recovery",
+            "description": "Verify state transitions and recovery across strong, medium, weak and deep signal levels.",
+            "software_under_test": "StarTrack",
+            "signal_source": "StarGen realtime binary pipe",
+            "signal": "BDS B1I D1",
+            "sample_rate_hz": 7680000,
+            "if_hz": 0,
+            "prn": 6,
+            "duration_s": 900.0,
+            "seed": 20260715,
+            "truth_initial_doppler_hz": 4500.0,
+            "truth_initial_code_phase_chips": 200.0,
+            "acquisition_doppler_hz": 4437.5,
+            "acquisition_code_phase_chips": 200.3,
+            "doppler_rate_hz_s": 0.02,
+            "doppler_sine_amplitude_hz": 0.5,
+            "doppler_sine_period_s": 120.0,
+            "external_carrier_aid_rate_hz_s": 0.015,
+            "known_navigation_bits": true,
+            "initial_state": "PullIn",
+            "automatic_transitions": true,
+            "cn0_schedule_mode": "Step",
+            "cn0_points": [
+                {
+                    "time_s": 0.0,
+                    "cn0_db_hz": 40.0
+                },
+                {
+                    "time_s": 120.0,
+                    "cn0_db_hz": 24.0
+                },
+                {
+                    "time_s": 240.0,
+                    "cn0_db_hz": 16.0
+                },
+                {
+                    "time_s": 360.0,
+                    "cn0_db_hz": 12.0
+                },
+                {
+                    "time_s": 480.0,
+                    "cn0_db_hz": 7.0
+                },
+                {
+                    "time_s": 660.0,
+                    "cn0_db_hz": 16.0
+                },
+                {
+                    "time_s": 780.0,
+                    "cn0_db_hz": 40.0
+                }
+            ],
+            "expectation": "No reacquisition, no transition divergence, and stable recovery to the strong-signal state."
+        },
+        {
+            "id": "tcxo_auto_threshold_dwell_s20260715",
+            "title": "Threshold dwell and hysteresis",
+            "description": "Hold near multiple sensitivity boundaries to verify transition dwell and hysteresis.",
+            "software_under_test": "StarTrack",
+            "signal_source": "StarGen realtime binary pipe",
+            "signal": "BDS B1I D1",
+            "sample_rate_hz": 7680000,
+            "if_hz": 0,
+            "prn": 6,
+            "duration_s": 900.0,
+            "seed": 20260715,
+            "truth_initial_doppler_hz": 4500.0,
+            "truth_initial_code_phase_chips": 200.0,
+            "acquisition_doppler_hz": 4437.5,
+            "acquisition_code_phase_chips": 200.3,
+            "doppler_rate_hz_s": 0.02,
+            "doppler_sine_amplitude_hz": 0.5,
+            "doppler_sine_period_s": 120.0,
+            "external_carrier_aid_rate_hz_s": 0.015,
+            "known_navigation_bits": true,
+            "initial_state": "PullIn",
+            "automatic_transitions": true,
+            "cn0_schedule_mode": "Step",
+            "cn0_points": [
+                {
+                    "time_s": 0.0,
+                    "cn0_db_hz": 40.0
+                },
+                {
+                    "time_s": 120.0,
+                    "cn0_db_hz": 29.0
+                },
+                {
+                    "time_s": 240.0,
+                    "cn0_db_hz": 19.0
+                },
+                {
+                    "time_s": 360.0,
+                    "cn0_db_hz": 17.0
+                },
+                {
+                    "time_s": 480.0,
+                    "cn0_db_hz": 14.0
+                },
+                {
+                    "time_s": 600.0,
+                    "cn0_db_hz": 12.5
+                },
+                {
+                    "time_s": 720.0,
+                    "cn0_db_hz": 15.5
+                },
+                {
+                    "time_s": 810.0,
+                    "cn0_db_hz": 33.0
+                }
+            ],
+            "expectation": "No state oscillation or transition-induced divergence; final recovery is stable."
+        },
+        {
+            "id": "tcxo_hold_deep_known_3_s20260715",
+            "title": "3 dB-Hz known-bit limit probe",
+            "description": "Identify the point at which the current BDS B1I known-bit implementation no longer remains stable.",
+            "software_under_test": "StarTrack",
+            "signal_source": "StarGen realtime binary pipe",
+            "signal": "BDS B1I D1",
+            "sample_rate_hz": 7680000,
+            "if_hz": 0,
+            "prn": 6,
+            "duration_s": 900.0,
+            "seed": 20260715,
+            "truth_initial_doppler_hz": 4500.0,
+            "truth_initial_code_phase_chips": 200.0,
+            "acquisition_doppler_hz": 4500.1,
+            "acquisition_code_phase_chips": 200.05,
+            "doppler_rate_hz_s": 0.02,
+            "doppler_sine_amplitude_hz": 0.5,
+            "doppler_sine_period_s": 120.0,
+            "external_carrier_aid_rate_hz_s": 0.015,
+            "known_navigation_bits": true,
+            "initial_state": "Deep",
+            "automatic_transitions": false,
+            "cn0_schedule_mode": "Step",
+            "cn0_points": [
+                {
+                    "time_s": 0.0,
+                    "cn0_db_hz": 3.0
+                }
+            ],
+            "expectation": "Exploratory limit case; failure is retained as boundary evidence."
+        },
+        {
+            "id": "tcxo_hold_deep_known_5_s20260715",
+            "title": "5 dB-Hz known-bit margin probe",
+            "description": "Explore margin below the formal BDS B1I target while retaining C/N0 monitor limitations.",
+            "software_under_test": "StarTrack",
+            "signal_source": "StarGen realtime binary pipe",
+            "signal": "BDS B1I D1",
+            "sample_rate_hz": 7680000,
+            "if_hz": 0,
+            "prn": 6,
+            "duration_s": 900.0,
+            "seed": 20260715,
+            "truth_initial_doppler_hz": 4500.0,
+            "truth_initial_code_phase_chips": 200.0,
+            "acquisition_doppler_hz": 4500.1,
+            "acquisition_code_phase_chips": 200.05,
+            "doppler_rate_hz_s": 0.02,
+            "doppler_sine_amplitude_hz": 0.5,
+            "doppler_sine_period_s": 120.0,
+            "external_carrier_aid_rate_hz_s": 0.015,
+            "known_navigation_bits": true,
+            "initial_state": "Deep",
+            "automatic_transitions": false,
+            "cn0_schedule_mode": "Step",
+            "cn0_points": [
+                {
+                    "time_s": 0.0,
+                    "cn0_db_hz": 5.0
+                }
+            ],
+            "expectation": "Exploratory case; tracking and C/N0 validity are reported separately."
+        },
+        {
+            "id": "tcxo_hold_deep_known_7_s20260715",
+            "title": "7 dB-Hz known-bit deep hold",
+            "description": "Validate the BDS B1I known-navigation-bit target with three deterministic noise seeds.",
+            "software_under_test": "StarTrack",
+            "signal_source": "StarGen realtime binary pipe",
+            "signal": "BDS B1I D1",
+            "sample_rate_hz": 7680000,
+            "if_hz": 0,
+            "prn": 6,
+            "duration_s": 900.0,
+            "seed": 20260715,
+            "truth_initial_doppler_hz": 4500.0,
+            "truth_initial_code_phase_chips": 200.0,
+            "acquisition_doppler_hz": 4500.1,
+            "acquisition_code_phase_chips": 200.05,
+            "doppler_rate_hz_s": 0.02,
+            "doppler_sine_amplitude_hz": 0.5,
+            "doppler_sine_period_s": 120.0,
+            "external_carrier_aid_rate_hz_s": 0.015,
+            "known_navigation_bits": true,
+            "initial_state": "Deep",
+            "automatic_transitions": false,
+            "cn0_schedule_mode": "Step",
+            "cn0_points": [
+                {
+                    "time_s": 0.0,
+                    "cn0_db_hz": 7.0
+                }
+            ],
+            "expectation": "Track for 900 s without divergence; tail frequency P95 <= 5 Hz and code P95 <= 0.2 chip."
+        },
+        {
+            "id": "tcxo_hold_deep_known_7_s20260716",
+            "title": "7 dB-Hz known-bit deep hold",
+            "description": "Validate the BDS B1I known-navigation-bit target with three deterministic noise seeds.",
+            "software_under_test": "StarTrack",
+            "signal_source": "StarGen realtime binary pipe",
+            "signal": "BDS B1I D1",
+            "sample_rate_hz": 7680000,
+            "if_hz": 0,
+            "prn": 6,
+            "duration_s": 900.0,
+            "seed": 20260716,
+            "truth_initial_doppler_hz": 4500.0,
+            "truth_initial_code_phase_chips": 200.0,
+            "acquisition_doppler_hz": 4500.1,
+            "acquisition_code_phase_chips": 200.05,
+            "doppler_rate_hz_s": 0.02,
+            "doppler_sine_amplitude_hz": 0.5,
+            "doppler_sine_period_s": 120.0,
+            "external_carrier_aid_rate_hz_s": 0.015,
+            "known_navigation_bits": true,
+            "initial_state": "Deep",
+            "automatic_transitions": false,
+            "cn0_schedule_mode": "Step",
+            "cn0_points": [
+                {
+                    "time_s": 0.0,
+                    "cn0_db_hz": 7.0
+                }
+            ],
+            "expectation": "Track for 900 s without divergence; tail frequency P95 <= 5 Hz and code P95 <= 0.2 chip."
+        },
+        {
+            "id": "tcxo_hold_deep_known_7_s20260717",
+            "title": "7 dB-Hz known-bit deep hold",
+            "description": "Validate the BDS B1I known-navigation-bit target with three deterministic noise seeds.",
+            "software_under_test": "StarTrack",
+            "signal_source": "StarGen realtime binary pipe",
+            "signal": "BDS B1I D1",
+            "sample_rate_hz": 7680000,
+            "if_hz": 0,
+            "prn": 6,
+            "duration_s": 900.0,
+            "seed": 20260717,
+            "truth_initial_doppler_hz": 4500.0,
+            "truth_initial_code_phase_chips": 200.0,
+            "acquisition_doppler_hz": 4500.1,
+            "acquisition_code_phase_chips": 200.05,
+            "doppler_rate_hz_s": 0.02,
+            "doppler_sine_amplitude_hz": 0.5,
+            "doppler_sine_period_s": 120.0,
+            "external_carrier_aid_rate_hz_s": 0.015,
+            "known_navigation_bits": true,
+            "initial_state": "Deep",
+            "automatic_transitions": false,
+            "cn0_schedule_mode": "Step",
+            "cn0_points": [
+                {
+                    "time_s": 0.0,
+                    "cn0_db_hz": 7.0
+                }
+            ],
+            "expectation": "Track for 900 s without divergence; tail frequency P95 <= 5 Hz and code P95 <= 0.2 chip."
+        },
+        {
+            "id": "tcxo_hold_deep_soft_10_s20260715",
+            "title": "10 dB-Hz autonomous boundary probe",
+            "description": "Retain a failing autonomous case to identify the present soft-decision boundary.",
+            "software_under_test": "StarTrack",
+            "signal_source": "StarGen realtime binary pipe",
+            "signal": "BDS B1I D1",
+            "sample_rate_hz": 7680000,
+            "if_hz": 0,
+            "prn": 6,
+            "duration_s": 900.0,
+            "seed": 20260715,
+            "truth_initial_doppler_hz": 4500.0,
+            "truth_initial_code_phase_chips": 200.0,
+            "acquisition_doppler_hz": 4500.1,
+            "acquisition_code_phase_chips": 200.05,
+            "doppler_rate_hz_s": 0.02,
+            "doppler_sine_amplitude_hz": 0.5,
+            "doppler_sine_period_s": 120.0,
+            "external_carrier_aid_rate_hz_s": 0.0,
+            "known_navigation_bits": false,
+            "initial_state": "Deep",
+            "automatic_transitions": false,
+            "cn0_schedule_mode": "Step",
+            "cn0_points": [
+                {
+                    "time_s": 0.0,
+                    "cn0_db_hz": 10.0
+                }
+            ],
+            "expectation": "Exploratory boundary case; failure is retained when tracking errors exceed the public limits."
+        },
+        {
+            "id": "tcxo_hold_deep_soft_12_s20260715",
+            "title": "12 dB-Hz autonomous deep hold",
+            "description": "Validate the current autonomous weak-signal retention boundary without known navigation bits.",
+            "software_under_test": "StarTrack",
+            "signal_source": "StarGen realtime binary pipe",
+            "signal": "BDS B1I D1",
+            "sample_rate_hz": 7680000,
+            "if_hz": 0,
+            "prn": 6,
+            "duration_s": 900.0,
+            "seed": 20260715,
+            "truth_initial_doppler_hz": 4500.0,
+            "truth_initial_code_phase_chips": 200.0,
+            "acquisition_doppler_hz": 4500.1,
+            "acquisition_code_phase_chips": 200.05,
+            "doppler_rate_hz_s": 0.02,
+            "doppler_sine_amplitude_hz": 0.5,
+            "doppler_sine_period_s": 120.0,
+            "external_carrier_aid_rate_hz_s": 0.0,
+            "known_navigation_bits": false,
+            "initial_state": "Deep",
+            "automatic_transitions": false,
+            "cn0_schedule_mode": "Step",
+            "cn0_points": [
+                {
+                    "time_s": 0.0,
+                    "cn0_db_hz": 12.0
+                }
+            ],
+            "expectation": "Track for 900 s without divergence; tail frequency P95 <= 5 Hz and code P95 <= 0.2 chip."
+        },
+        {
+            "id": "tcxo_hold_medium_24_s20260715",
+            "title": "24 dB-Hz medium-signal hold",
+            "description": "Measure the long-term stability of the medium-signal operating range.",
+            "software_under_test": "StarTrack",
+            "signal_source": "StarGen realtime binary pipe",
+            "signal": "BDS B1I D1",
+            "sample_rate_hz": 7680000,
+            "if_hz": 0,
+            "prn": 6,
+            "duration_s": 900.0,
+            "seed": 20260715,
+            "truth_initial_doppler_hz": 4500.0,
+            "truth_initial_code_phase_chips": 200.0,
+            "acquisition_doppler_hz": 4500.1,
+            "acquisition_code_phase_chips": 200.05,
+            "doppler_rate_hz_s": 0.02,
+            "doppler_sine_amplitude_hz": 0.5,
+            "doppler_sine_period_s": 120.0,
+            "external_carrier_aid_rate_hz_s": 0.0,
+            "known_navigation_bits": false,
+            "initial_state": "Medium",
+            "automatic_transitions": false,
+            "cn0_schedule_mode": "Step",
+            "cn0_points": [
+                {
+                    "time_s": 0.0,
+                    "cn0_db_hz": 24.0
+                }
+            ],
+            "expectation": "Track for 900 s without divergence; tail frequency P95 <= 5 Hz and code P95 <= 0.2 chip."
+        },
+        {
+            "id": "tcxo_hold_weak_16_s20260715",
+            "title": "16 dB-Hz weak-signal hold",
+            "description": "Measure weak-signal tracking stability under continuous TCXO-equivalent dynamics.",
+            "software_under_test": "StarTrack",
+            "signal_source": "StarGen realtime binary pipe",
+            "signal": "BDS B1I D1",
+            "sample_rate_hz": 7680000,
+            "if_hz": 0,
+            "prn": 6,
+            "duration_s": 900.0,
+            "seed": 20260715,
+            "truth_initial_doppler_hz": 4500.0,
+            "truth_initial_code_phase_chips": 200.0,
+            "acquisition_doppler_hz": 4500.1,
+            "acquisition_code_phase_chips": 200.05,
+            "doppler_rate_hz_s": 0.02,
+            "doppler_sine_amplitude_hz": 0.5,
+            "doppler_sine_period_s": 120.0,
+            "external_carrier_aid_rate_hz_s": 0.0,
+            "known_navigation_bits": false,
+            "initial_state": "Weak",
+            "automatic_transitions": false,
+            "cn0_schedule_mode": "Step",
+            "cn0_points": [
+                {
+                    "time_s": 0.0,
+                    "cn0_db_hz": 16.0
+                }
+            ],
+            "expectation": "Track for 900 s without divergence; tail frequency P95 <= 5 Hz and code P95 <= 0.2 chip."
+        }
+    ]
+}

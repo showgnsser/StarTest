@@ -1,0 +1,60 @@
+{
+    "id": "tcxo_auto_threshold_dwell_s20260715",
+    "title": "Threshold dwell and hysteresis",
+    "description": "Hold near multiple sensitivity boundaries to verify transition dwell and hysteresis.",
+    "software_under_test": "StarTrack",
+    "signal_source": "StarGen realtime binary pipe",
+    "signal": "BDS B1I D1",
+    "sample_rate_hz": 7680000,
+    "if_hz": 0,
+    "prn": 6,
+    "duration_s": 900.0,
+    "seed": 20260715,
+    "truth_initial_doppler_hz": 4500.0,
+    "truth_initial_code_phase_chips": 200.0,
+    "acquisition_doppler_hz": 4437.5,
+    "acquisition_code_phase_chips": 200.3,
+    "doppler_rate_hz_s": 0.02,
+    "doppler_sine_amplitude_hz": 0.5,
+    "doppler_sine_period_s": 120.0,
+    "external_carrier_aid_rate_hz_s": 0.015,
+    "known_navigation_bits": true,
+    "initial_state": "PullIn",
+    "automatic_transitions": true,
+    "cn0_schedule_mode": "Step",
+    "cn0_points": [
+        {
+            "time_s": 0.0,
+            "cn0_db_hz": 40.0
+        },
+        {
+            "time_s": 120.0,
+            "cn0_db_hz": 29.0
+        },
+        {
+            "time_s": 240.0,
+            "cn0_db_hz": 19.0
+        },
+        {
+            "time_s": 360.0,
+            "cn0_db_hz": 17.0
+        },
+        {
+            "time_s": 480.0,
+            "cn0_db_hz": 14.0
+        },
+        {
+            "time_s": 600.0,
+            "cn0_db_hz": 12.5
+        },
+        {
+            "time_s": 720.0,
+            "cn0_db_hz": 15.5
+        },
+        {
+            "time_s": 810.0,
+            "cn0_db_hz": 33.0
+        }
+    ],
+    "expectation": "No state oscillation or transition-induced divergence; final recovery is stable."
+}
