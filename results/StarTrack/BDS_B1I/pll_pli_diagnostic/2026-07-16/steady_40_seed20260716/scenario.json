@@ -1,0 +1,33 @@
+{
+    "id": "steady_40_seed20260716",
+    "title": "40 dB-Hz PLL and PLI steady-state diagnostic",
+    "description": "Verify that strong-signal PLL control is active and that PLI reports the current carrier-lock quality.",
+    "software_under_test": "StarTrack",
+    "signal_source": "StarGen realtime binary pipe",
+    "signal": "BDS B1I D1",
+    "sample_rate_hz": 7680000,
+    "prn": 6,
+    "duration_s": 900.0,
+    "seed": 20260716,
+    "truth_initial_doppler_hz": 4500.0,
+    "truth_initial_code_phase_chips": 200.0,
+    "acquisition_doppler_hz": 4437.5,
+    "acquisition_code_phase_chips": 200.3,
+    "doppler_rate_hz_s": 0.02,
+    "doppler_sine_amplitude_hz": 0.5,
+    "doppler_sine_period_s": 120.0,
+    "cn0_schedule_mode": "Step",
+    "cn0_points": [
+        {
+            "time_s": 0.0,
+            "cn0_db_hz": 40.0
+        }
+    ],
+    "expected": {
+        "tracking_passed": true,
+        "fallback_to_pullin_count": 0,
+        "transition_divergence_count": 0,
+        "tail_doppler_p95_hz_max": 5.0,
+        "tail_code_p95_chips_max": 0.2
+    }
+}

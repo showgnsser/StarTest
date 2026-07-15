@@ -1,0 +1,127 @@
+{
+    "status": "PASS",
+    "tracking_passed": true,
+    "duration_s": 900.0,
+    "wall_time_s": 104.54699999999139,
+    "realtime_ratio": 8.608568395076608,
+    "state_path": "PullIn -> Lock -> Strong",
+    "tail_doppler_rms_hz": 0.22519246429379167,
+    "tail_doppler_p95_hz": 0.47810418,
+    "tail_code_p95_chips": 0.00339949,
+    "tail_cn0_bias_db": -0.4891303659468437,
+    "fallback_to_pullin_count": 0,
+    "transition_divergence_count": 0,
+    "state_transitions": [
+        {
+            "time_s": 1.22,
+            "from_state": "PullIn",
+            "to_state": "Lock",
+            "before": {
+                "samples": 2,
+                "doppler_rms_hz": 45.144055019524515,
+                "doppler_p95_hz": 60.027041677999996,
+                "doppler_max_hz": 62.5009236,
+                "code_mae_chips": 0.164985025,
+                "code_p95_chips": 0.2850240505,
+                "code_max_chips": 0.29836172,
+                "fll_lock_ratio": 0.5,
+                "dll_lock_ratio": 0.5,
+                "frame_valid_ratio": 1.0,
+                "cn0_bias_db": -1.2685099400000013,
+                "cn0_estimate_mean_db_hz": 38.73149006,
+                "cn0_truth_mean_db_hz": 40.0,
+                "cn0_rmse_db": 1.2685099400000013,
+                "cn0_p95_abs_db": 1.2685099400000013,
+                "cn0_valid_ratio": 0.5,
+                "cn0_methods": {
+                    "M2M4": 1
+                },
+                "states": {
+                    "PullIn": 2
+                }
+            },
+            "after": {
+                "samples": 60,
+                "doppler_rms_hz": 0.41521470110185654,
+                "doppler_p95_hz": 0.4382955614999999,
+                "doppler_max_hz": 2.82862665,
+                "code_mae_chips": 0.0013780671666666668,
+                "code_p95_chips": 0.0038469144999999988,
+                "code_max_chips": 0.00564931,
+                "fll_lock_ratio": 0.95,
+                "dll_lock_ratio": 1.0,
+                "frame_valid_ratio": 1.0,
+                "cn0_bias_db": -0.5145310774576273,
+                "cn0_estimate_mean_db_hz": 39.485468922542374,
+                "cn0_truth_mean_db_hz": 40.0,
+                "cn0_rmse_db": 0.5243711834996915,
+                "cn0_p95_abs_db": 0.682005602999999,
+                "cn0_valid_ratio": 0.9833333333333333,
+                "cn0_methods": {
+                    "NWPR": 59
+                },
+                "states": {
+                    "Lock": 4,
+                    "Strong": 56
+                }
+            },
+            "diverged": false
+        },
+        {
+            "time_s": 5.12,
+            "from_state": "Lock",
+            "to_state": "Strong",
+            "before": {
+                "samples": 6,
+                "doppler_rms_hz": 26.08957012595242,
+                "doppler_p95_hz": 50.13151399,
+                "doppler_max_hz": 62.5009236,
+                "code_mae_chips": 0.05732375666666667,
+                "code_p95_chips": 0.2316733725,
+                "code_max_chips": 0.29836172,
+                "fll_lock_ratio": 0.3333333333333333,
+                "dll_lock_ratio": 0.8333333333333334,
+                "frame_valid_ratio": 1.0,
+                "cn0_bias_db": -0.712405425,
+                "cn0_estimate_mean_db_hz": 39.287594575,
+                "cn0_truth_mean_db_hz": 40.0,
+                "cn0_rmse_db": 0.7881178567695309,
+                "cn0_p95_abs_db": 1.1823034640000005,
+                "cn0_valid_ratio": 0.6666666666666666,
+                "cn0_methods": {
+                    "M2M4": 1,
+                    "NWPR": 3
+                },
+                "states": {
+                    "PullIn": 2,
+                    "Lock": 4
+                }
+            },
+            "after": {
+                "samples": 60,
+                "doppler_rms_hz": 0.2061879568032466,
+                "doppler_p95_hz": 0.3836610259999998,
+                "doppler_max_hz": 0.55746835,
+                "code_mae_chips": 0.0012223334999999999,
+                "code_p95_chips": 0.003224403,
+                "code_max_chips": 0.00490238,
+                "fll_lock_ratio": 1.0,
+                "dll_lock_ratio": 1.0,
+                "frame_valid_ratio": 1.0,
+                "cn0_bias_db": -0.5137213828333334,
+                "cn0_estimate_mean_db_hz": 39.48627861716667,
+                "cn0_truth_mean_db_hz": 40.0,
+                "cn0_rmse_db": 0.5232585413418274,
+                "cn0_p95_abs_db": 0.6592841529999969,
+                "cn0_valid_ratio": 1.0,
+                "cn0_methods": {
+                    "NWPR": 60
+                },
+                "states": {
+                    "Strong": 60
+                }
+            },
+            "diverged": false
+        }
+    ]
+}
