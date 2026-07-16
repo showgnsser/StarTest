@@ -1,0 +1,29 @@
+{
+  "title": "GPS L1CA state sensitivity and transitions",
+  "date": "2026-07-16",
+  "seed": 20260719,
+  "cases": [
+    "pullin_24",
+    "lock_28",
+    "lock_30",
+    "strong_26",
+    "strong_30",
+    "longfast_24",
+    "longfast_26",
+    "longlock_20",
+    "longlock_22",
+    "medium_16",
+    "medium_18",
+    "weak_14",
+    "weak_16",
+    "deep_soft_14",
+    "deep_soft_12",
+    "deep_known_3",
+    "aided_known_24",
+    "auto_step_40_24_18_14_40",
+    "auto_ramp_40_12_40",
+    "auto_short_shadows",
+    "auto_ramp_40_12_40_unaided"
+  ],
+  "note": "Development matrix; one seed, not a statistical sensitivity claim."
+}

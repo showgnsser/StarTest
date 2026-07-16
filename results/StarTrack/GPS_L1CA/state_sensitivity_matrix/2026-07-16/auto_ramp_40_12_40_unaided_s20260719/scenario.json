@@ -1,0 +1,46 @@
+{
+  "signal": "GPS L1CA",
+  "component": "data",
+  "prn": 6,
+  "sample_rate_hz": 7680000,
+  "duration_s": 600.0,
+  "seed": 20260719,
+  "initial_state": "PullIn",
+  "automatic_transitions": true,
+  "known_navigation_bits": false,
+  "cn0_mode": "Linear",
+  "cn0_schedule": [
+    {
+      "time_s": 0.0,
+      "cn0_db_hz": 40.0
+    },
+    {
+      "time_s": 120.0,
+      "cn0_db_hz": 40.0
+    },
+    {
+      "time_s": 300.0,
+      "cn0_db_hz": 12.0
+    },
+    {
+      "time_s": 420.0,
+      "cn0_db_hz": 12.0
+    },
+    {
+      "time_s": 600.0,
+      "cn0_db_hz": 40.0
+    }
+  ],
+  "acquisition_error_hz": 62.5,
+  "code_phase_error_chips": 0.3,
+  "doppler_rate_hz_s": 0.02,
+  "doppler_sine_amplitude_hz": 0.5,
+  "doppler_sine_period_s": 120.0,
+  "acceptance": {
+    "doppler_rms_hz_max": 5.0,
+    "doppler_p95_hz_max": 10.0,
+    "code_phase_p95_chips_max": 0.2,
+    "reacquisition_count_max": 0,
+    "transition_divergence_count_max": 0
+  }
+}

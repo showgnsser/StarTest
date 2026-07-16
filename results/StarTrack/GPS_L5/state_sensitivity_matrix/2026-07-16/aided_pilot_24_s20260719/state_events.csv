@@ -1,0 +1,2 @@
+﻿time_s,frame_id,event,from_state,to_state
+0.02000000,1,SyncLocked,Aided,Aided

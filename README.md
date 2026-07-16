@@ -21,6 +21,8 @@ docs/                                     测试发布规范
 
 ## 已发布测试集
 
+- `GPS_L1CA/state_sensitivity_matrix`：九状态固定灵敏度、阶梯、缓慢衰落、短遮挡和无辅助弱信号对照，共21个开发用例。
+- `GPS_L5/state_sensitivity_matrix`：导频九状态固定灵敏度、阶梯、缓慢衰落和短遮挡，共15个开发用例。
 - `BDS_B1I/power_transitions`：短时功率变化与遮挡恢复测试。
 - `BDS_B1I/realtime_tcxo_campaign`：15 个 900 s 实时 TCXO 等效动态测试，覆盖稳态灵敏度、极限边界、突变切换、缓慢衰减恢复和门限迟滞。
 - `BDS_B1I/pll_pli_diagnostic`：强信号PLL参与度、PLI监测修正和强弱状态分工回归。

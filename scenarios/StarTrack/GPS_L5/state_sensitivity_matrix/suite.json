@@ -1,0 +1,23 @@
+{
+  "title": "GPS L5 state sensitivity and transitions",
+  "date": "2026-07-16",
+  "seed": 20260719,
+  "cases": [
+    "pullin_28",
+    "lock_28",
+    "strong_26",
+    "longfast_24",
+    "longlock_20",
+    "medium_16",
+    "medium_18",
+    "weak_14",
+    "weak_16",
+    "deep_pilot_12",
+    "deep_pilot_10",
+    "aided_pilot_24",
+    "auto_step_40_28_18_14_40",
+    "auto_ramp_40_12_40",
+    "auto_short_shadows"
+  ],
+  "note": "Development matrix; one seed, not a statistical sensitivity claim."
+}

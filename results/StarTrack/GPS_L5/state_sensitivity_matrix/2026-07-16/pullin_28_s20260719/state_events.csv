@@ -1,0 +1,12 @@
+﻿time_s,frame_id,event,from_state,to_state
+0.56000000,28,SyncLocked,PullIn,PullIn
+1.76000000,88,StateRequested,PullIn,Lock
+1.78000000,89,StateCommitted,PullIn,Lock
+4.08000000,204,StateRequested,Lock,Strong
+4.10000000,205,StateCommitted,Lock,Strong
+10.74000000,537,StateRequested,Strong,LongFast
+10.76000000,538,StateCommitted,Strong,LongFast
+13.94000000,697,StateRequested,LongFast,LongLock
+13.96000000,698,StateCommitted,LongFast,LongLock
+17.14000000,857,StateRequested,LongLock,Medium
+17.16000000,858,StateCommitted,LongLock,Medium
