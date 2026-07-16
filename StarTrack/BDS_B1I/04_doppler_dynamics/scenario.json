@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "case_id": "ST-BDSB1I-04-DOPPLER_DYNAMICS",
+  "test_set": "Qualification",
+  "signal": "BDS_B1I",
+  "category": "doppler_dynamics",
+  "source": "StarGen realtime binary pipe",
+  "duration_s": 900.0,
+  "seeds": [
+    20260716,
+    20260717,
+    20260718
+  ],
+  "clock_profile": {
+    "id": "GOOD_TCXO_V1",
+    "linear_doppler_rate_hz_s": 0.02,
+    "doppler_jerk_hz_s2": 2e-05,
+    "sine_amplitude_hz": 0.5,
+    "sine_period_s": 120.0
+  },
+  "sensitivity_targets_db_hz": {
+    "pull_in": 24.0,
+    "sustained_unaided": 12.0,
+    "sustained_aided": 3.0
+  },
+  "input": {
+    "stream_format": "binary 3-bit I/Q",
+    "acquisition_frequency_errors_hz": [
+      -62.5,
+      0.0,
+      62.5
+    ],
+    "acquisition_code_errors_chips": [
+      -0.3,
+      0.0,
+      0.3
+    ],
+    "cn0_levels_db_hz": [
+      40.0,
+      30.0,
+      12.0,
+      3.0
+    ],
+    "max_doppler_rate_levels_hz_s": [
+      0.0,
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "dynamic_model": "bounded_sine",
+    "bit_aid_by_level": "none_then_known_at_aided_boundary"
+  },
+  "input_description": "扫描0、0.1、0.25、0.5、0.75和1 Hz/s，使用有界正弦动态而非无限斜升。",
+  "truth_description": "GOOD_TCXO_V1基础扰动叠加指定最大频率变化率。",
+  "acceptance": {
+    "no_reacquisition": true,
+    "no_sync_loss": true,
+    "min_carrier_valid_ratio": 0.95,
+    "max_doppler_rms_hz": 5.0,
+    "max_doppler_p95_hz": 10.0,
+    "max_code_phase_p95_chips": 0.2
+  },
+  "required_outputs": [
+    "summary.json",
+    "metrics.csv",
+    "seed-*/observations.csv",
+    "seed-*/state_events.csv",
+    "figures/*.png"
+  ]
+}

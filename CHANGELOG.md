@@ -1,5 +1,15 @@
 # Changelog
 
+## Fixed Qualification Suite v1
+
+### Reorganized
+
+- 主目录改为按信号和八类固定现实场景组织，案例 ID 不再包含日期。
+- 旧 `scenarios/`、`results/` 和测试矩阵完整迁入 `legacy/`，未删除历史失败边界。
+- 新增 GPS L1CA、BDS B1I、GPS L5 三项灵敏度首页和版本对比表。
+- 新增固定案例结构校验器，检查报告章节、物理单位、Git版本、种子和图片。
+- Development 结果留在 StarTrack 本地；本仓库只接收 Qualification 黑盒结果。
+
 ## 2026-07-16
 
 ### Organized

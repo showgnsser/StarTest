@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "case_id": "ST-GPSL5-05-STEP_TRANSITIONS",
+  "test_set": "Qualification",
+  "signal": "GPS_L5",
+  "category": "step_transitions",
+  "source": "StarGen realtime binary pipe",
+  "duration_s": 900.0,
+  "seeds": [
+    20260716,
+    20260717,
+    20260718
+  ],
+  "clock_profile": {
+    "id": "GOOD_TCXO_V1",
+    "linear_doppler_rate_hz_s": 0.02,
+    "doppler_jerk_hz_s2": 2e-05,
+    "sine_amplitude_hz": 0.5,
+    "sine_period_s": 120.0
+  },
+  "sensitivity_targets_db_hz": {
+    "pull_in": 28.0,
+    "sustained_unaided": 12.0,
+    "sustained_aided": 3.0
+  },
+  "input": {
+    "stream_format": "binary 3-bit I/Q",
+    "acquisition_frequency_errors_hz": [
+      -31.25,
+      0.0,
+      31.25
+    ],
+    "acquisition_code_errors_chips": [
+      -0.3,
+      0.0,
+      0.3
+    ],
+    "cn0_mode": "step",
+    "cn0_schedule": [
+      {
+        "start_s": 0.0,
+        "cn0_db_hz": 40.0
+      },
+      {
+        "start_s": 180.0,
+        "cn0_db_hz": 30.0
+      },
+      {
+        "start_s": 360.0,
+        "cn0_db_hz": 18.0
+      },
+      {
+        "start_s": 540.0,
+        "cn0_db_hz": 3.0
+      },
+      {
+        "start_s": 720.0,
+        "cn0_db_hz": 40.0
+      }
+    ]
+  },
+  "input_description": "强信号到中信号、弱信号、极弱信号，再恢复到强信号。",
+  "truth_description": "C/N0按固定时刻阶跃，载波、码、数据位和噪声序列连续。",
+  "acceptance": {
+    "no_reacquisition": true,
+    "no_sync_loss": true,
+    "min_carrier_valid_ratio": 0.95,
+    "max_doppler_rms_hz": 5.0,
+    "max_doppler_p95_hz": 10.0,
+    "max_code_phase_p95_chips": 0.2
+  },
+  "required_outputs": [
+    "summary.json",
+    "metrics.csv",
+    "seed-*/observations.csv",
+    "seed-*/state_events.csv",
+    "figures/*.png"
+  ]
+}

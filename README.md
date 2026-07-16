@@ -1,42 +1,63 @@
 # StarTest
 
-StarTest 保存 Star 系列 GNSS 软件的黑盒测试结果。
+StarTest 是 Star 系列 GNSS 软件的固定黑盒 Qualification 基准库。主目录
+按“软件 -> 信号 -> 固定现实场景”组织，运行日期只保存在结果元数据中，
+不再复制目录或改变案例 ID。
 
-仓库记录以下内容：
-
-- 测试场景、信号真值和外部输入；
-- 可公开的跟踪输出观测；
-- 预期结果、验收门限和实际结论；
-- 状态变化、精度统计和可视化图表。
-
-仓库不保存鉴别器公式、环路滤波器参数、内部状态判据、相关器内部量或其他算法实现细节。这些内容分别保存在 StarTrack 和 StarGen 软件仓库中。
-
-## 目录
-
-```text
-scenarios/StarTrack/<signal>/<category>/  黑盒场景清单
-results/StarTrack/<signal>/<category>/    按日期归档的结果
-docs/                                     测试发布规范
-```
+仓库公开信号真值、外部输入、验收门限、1 Hz 输出、图表和结论；鉴别器
+公式、滤波器参数及其他算法实现仍只保存在对应软件仓库。
 
 ## 快速入口
 
-- [全部测试用例矩阵](TEST_MATRIX.md)：按信号分组，逐用例列出输入、结果和详情链接。
-- `results/`：每个用例的场景、公开观测、状态事件、图表和结果说明。
-- `scenarios/`：可重复执行的黑盒测试集定义。
+- [固定测试矩阵](TEST_MATRIX.md)
+- [GPS L1CA](StarTrack/GPS_L1CA/README.md)
+- [BDS B1I](StarTrack/BDS_B1I/README.md)
+- [GPS L5](StarTrack/GPS_L5/README.md)
+- [发布规范](docs/test_policy.md)
+- [旧日期归档](legacy/README.md)
 
-测试矩阵由以下命令重建：
+## 固定结构
+
+```text
+StarTrack/
+  GPS_L1CA/
+    README.md
+    01_pull_in_sensitivity/
+      README.md
+      scenario.json
+      runs/
+        startrack-<commit>_<profile-version>/
+          summary.json
+          metrics.csv
+          seed-001/
+            observations.csv
+            state_events.csv
+          figures/
+  BDS_B1I/
+  GPS_L5/
+legacy/
+```
+
+每个信号固定回答三个问题：牵引灵敏度、无电文辅助持续灵敏度、已知
+电文辅助持续灵敏度。随后用多普勒动态、强弱阶跃、缓慢遮挡、门限徘徊
+和耐久场景检验这些指标能否在真实时钟扰动下稳定保持。
+
+## 两套测试
+
+- `Development`：定义保存在 StarTrack，默认单种子和短时运行，结果只留
+  本地，用于日常调试。
+- `Qualification`：定义与公开结果保存在本仓库，常规场景3个固定种子，
+  灵敏度边界5个固定种子。
+
+5种子结果用于工程基准，不表述为统计意义上的95%成功概率。
+
+## 工具
 
 ```powershell
+python tools\validate_catalog.py
 python tools\build_test_matrix.py
 ```
 
-## 测试集分类
-
-- `BDS_B1I/power_transitions`：短时功率变化与遮挡恢复测试。
-- `BDS_B1I/realtime_tcxo_campaign`：15 个 900 s 实时 TCXO 等效动态测试，覆盖稳态灵敏度、极限边界、突变切换、缓慢衰减恢复和门限迟滞。
-- `BDS_B1I/pll_pli_diagnostic`：强信号PLL参与度、PLI监测修正和强弱状态分工回归。
-- `BDS_B1I/adaptive_kalman`：固定参数和受约束自适应模式的900 s黑盒A/B验证。
-- `GPS_L1CA/cross_signal_regression`：L1CA强信号、24 dB-Hz牵引、短时强弱切换和900 s慢衰落边界。
-- `GPS_L5/cross_signal_regression`：L5强信号、28 dB-Hz牵引、短时强弱切换和900 s慢衰落边界。
-- `GPS_L1CA/state_sensitivity_matrix`、`GPS_L5/state_sensitivity_matrix`：固定状态灵敏度和自动强弱切换矩阵。
+`validate_catalog.py` 检查固定案例 ID、必需报告章节、物理单位、Git版本、
+种子完整性和图片链接。失败用例不会删除，它是后续算法版本必须保留的
+回归边界。
