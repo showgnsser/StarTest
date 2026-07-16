@@ -11,6 +11,7 @@
 ### Adaptive KF Validation
 
 - 发布BDS B1I固定参数与受约束自适应模式的六组900 s实时管道A/B结果。
+- 为六个用例补充全时段码相位误差、频率误差、PLI和C/N0跟踪图。
 - 40 dB-Hz稳态和40到7 dB-Hz场景无性能回归；40到3再恢复40 dB-Hz场景全部通过并稳定返回Strong。
 - StarTest只记录黑盒输入、输出和结论；自适应原理与内部参数保存在StarTrack仓库。
 

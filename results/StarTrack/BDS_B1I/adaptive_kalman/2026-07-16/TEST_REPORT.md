@@ -27,3 +27,10 @@
 
 全部六组测试均无重新捕获、无状态切换后持续发散，帧有效率为100%。本轮为单种子
 开发回归，不能表述为统计成功率。
+
+## 跟踪图
+
+| 模式 | 40 dB-Hz | 40到7 dB-Hz | 40到3再到40 dB-Hz |
+|---|---|---|---|
+| 固定 | [查看](akf_fixed_strong_40_s20260715/tracking.png) | [查看](akf_fixed_40_to_7_s20260715/tracking.png) | [查看](akf_fixed_40_3_40_s20260715/tracking.png) |
+| 自适应 | [查看](akf_adaptive_strong_40_s20260715/tracking.png) | [查看](akf_adaptive_40_to_7_s20260715/tracking.png) | [查看](akf_adaptive_40_3_40_s20260715/tracking.png) |
