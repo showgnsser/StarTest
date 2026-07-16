@@ -1,0 +1,7 @@
+case,mode,duration_s,seed,cn0_path_db_hz,result,doppler_rms_hz,doppler_p95_hz,code_p95_chips,rate_rms_hz_s,states
+akf_fixed_strong_40,fixed,900,20260715,40,PASS,0.008880,0.017613,0.003682,0.008793,Strong
+akf_adaptive_strong_40,adaptive,900,20260715,40,PASS,0.008880,0.017613,0.003682,0.008793,Strong
+akf_fixed_40_to_7,fixed,900,20260715,40->7,PASS,1.514359,2.120998,0.143782,0.034960,Deep
+akf_adaptive_40_to_7,adaptive,900,20260715,40->7,PASS,1.514359,2.120998,0.143782,0.034960,Deep
+akf_fixed_40_3_40,fixed,900,20260715,40->3->40,PASS,3.250330,5.073505,0.101364,0.018418,Deep+Weak+Medium+Strong
+akf_adaptive_40_3_40,adaptive,900,20260715,40->3->40,PASS,2.924607,4.885424,0.101364,0.019004,Deep+Weak+Medium+Strong

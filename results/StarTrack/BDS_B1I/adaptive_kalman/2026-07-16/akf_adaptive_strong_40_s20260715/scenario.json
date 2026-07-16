@@ -1,0 +1,16 @@
+{
+  "signal": "BDS B1I",
+  "prn": 6,
+  "duration_s": 900,
+  "seed": 20260715,
+  "initial_state": "PullIn",
+  "tracking_mode": "adaptive",
+  "cn0_mode": "Step",
+  "cn0_schedule": [{"time_s": 0, "cn0_db_hz": 40}],
+  "acquisition_error_hz": -62.5,
+  "code_phase_error_chips": 0.3,
+  "doppler_rate_hz_s": 0.020,
+  "doppler_jerk_hz_s2": 0.000020,
+  "doppler_sine_amplitude_hz": 0.5,
+  "doppler_sine_period_s": 120
+}
