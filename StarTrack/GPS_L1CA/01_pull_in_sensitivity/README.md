@@ -30,11 +30,24 @@
 
 ## 实际结果
 
-尚未在当前固定案例版本上发布 Qualification 运行。结果将保存在
-`runs/startrack-<commit>_<profile-version>/`，运行时间只写入
-`summary.json`，不会改变案例 ID 或目录。
+发布版本：`startrack-503cdea_pullin-v2`。
+
+| 指标 | 实际结果 |
+|---|---:|
+| 固定种子 | 5 |
+| 必测组合 | 35 |
+| 通过组合 | 35/35 |
+| 最慢 PullIn 退出 | 9.22 s |
+| 最坏 Doppler RMS | 0.1662 Hz |
+| 最坏 Doppler P95 | 0.2851 Hz |
+| 最坏码相位 P95 | 0.0337 chip |
+
+![五种子牵引矩阵](runs/startrack-503cdea_pullin-v2/figures/pullin_matrix.png)
+
+![22 dB-Hz 边界种子跟踪过程](runs/startrack-503cdea_pullin-v2/figures/representative_trace.png)
 
 ## 结论
 
-待固定种子运行完成后填写。失败结果不会删除，它将作为下一版本的回归
-基线保留。
+GPS L1CA 在 `22 dB-Hz / -148 dBm`、`GOOD_TCXO_V1` 和规定捕获移交误差
+矩阵下通过五种子牵引 Qualification。该结论只覆盖牵引场景，不替代尚待按
+最新目标重跑的持续灵敏度、动态和耐久测试。

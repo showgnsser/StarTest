@@ -21,7 +21,7 @@
   "sensitivity_targets_db_hz": {
     "pull_in": 24.0,
     "sustained_unaided": 12.0,
-    "sustained_aided": 3.0
+    "sustained_aided": 7.0
   },
   "input": {
     "stream_format": "binary 3-bit I/Q",
@@ -39,7 +39,7 @@
       40.0,
       30.0,
       12.0,
-      3.0
+      7.0
     ],
     "max_doppler_rate_levels_hz_s": [
       0.0,

@@ -30,11 +30,24 @@
 
 ## 实际结果
 
-尚未在当前固定案例版本上发布 Qualification 运行。结果将保存在
-`runs/startrack-<commit>_<profile-version>/`，运行时间只写入
-`summary.json`，不会改变案例 ID 或目录。
+发布版本：`startrack-503cdea_pullin-v2`。
+
+| 指标 | 实际结果 |
+|---|---:|
+| 固定种子 | 5 |
+| 必测组合 | 35 |
+| 通过组合 | 35/35 |
+| 最慢 PullIn 退出 | 6.24 s |
+| 最坏 Doppler RMS | 0.1311 Hz |
+| 最坏 Doppler P95 | 0.2309 Hz |
+| 最坏码相位 P95 | 0.0205 chip |
+
+![五种子牵引矩阵](runs/startrack-503cdea_pullin-v2/figures/pullin_matrix.png)
+
+![24 dB-Hz 边界种子跟踪过程](runs/startrack-503cdea_pullin-v2/figures/representative_trace.png)
 
 ## 结论
 
-待固定种子运行完成后填写。失败结果不会删除，它将作为下一版本的回归
-基线保留。
+BDS B1I 在 `24 dB-Hz / -146 dBm`、`GOOD_TCXO_V1` 和规定捕获移交误差
+矩阵下通过五种子牵引 Qualification。`23 dB-Hz` 探索数据没有混入本次
+35 个正式组合，也不用于下调公开灵敏度边界。

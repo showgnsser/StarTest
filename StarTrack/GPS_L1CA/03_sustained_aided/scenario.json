@@ -23,7 +23,7 @@
   "sensitivity_targets_db_hz": {
     "pull_in": 22.0,
     "sustained_unaided": 12.0,
-    "sustained_aided": 3.0
+    "sustained_aided": 7.0
   },
   "input": {
     "stream_format": "binary 3-bit I/Q",
@@ -44,12 +44,12 @@
       },
       {
         "start_s": 60.0,
-        "cn0_db_hz": 3.0
+        "cn0_db_hz": 7.0
       }
     ],
     "assume_sync": true,
     "bit_aid": "known",
-    "below_boundary_probe_db_hz": 2.0
+    "below_boundary_probe_db_hz": 6.0
   },
   "input_description": "30 dB-Hz预热60秒，随后降到已知位辅助目标强度并保持900秒。",
   "truth_description": "提供与StarGen完全一致的位值、位索引和时间映射。",

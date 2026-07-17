@@ -19,21 +19,21 @@ SIGNALS = {
         "code": "GPSL1CA",
         "pull_in_db_hz": 22.0,
         "unaided_db_hz": 12.0,
-        "aided_db_hz": 3.0,
+        "aided_db_hz": 7.0,
     },
     "BDS_B1I": {
         "title": "BDS B1I",
         "code": "BDSB1I",
         "pull_in_db_hz": 24.0,
         "unaided_db_hz": 12.0,
-        "aided_db_hz": 3.0,
+        "aided_db_hz": 7.0,
     },
     "GPS_L5": {
         "title": "GPS L5",
         "code": "GPSL5",
         "pull_in_db_hz": 28.0,
         "unaided_db_hz": 12.0,
-        "aided_db_hz": 3.0,
+        "aided_db_hz": 7.0,
     },
 }
 

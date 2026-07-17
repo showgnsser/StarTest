@@ -21,7 +21,7 @@
   "sensitivity_targets_db_hz": {
     "pull_in": 28.0,
     "sustained_unaided": 12.0,
-    "sustained_aided": 3.0
+    "sustained_aided": 7.0
   },
   "input": {
     "stream_format": "binary 3-bit I/Q",

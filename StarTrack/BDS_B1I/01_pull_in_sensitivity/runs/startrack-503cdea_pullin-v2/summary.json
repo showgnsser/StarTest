@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "git_sha": "503cdeae75a8a9cd15acbc876eac5334be7d892e",
+  "profile_version": "pullin-v2",
+  "run_timestamp": "2026-07-17T09:47:46.839137+08:00",
+  "case_id": "ST-BDSB1I-01-PULL_IN_SENSITIVITY",
+  "seeds": [
+    20260716,
+    20260717,
+    20260718,
+    20260719,
+    20260720
+  ],
+  "source_campaign": "b1i_qualification_pullin",
+  "target_cn0_db_hz": 24.0,
+  "required_combinations": 35,
+  "passed_combinations": 35,
+  "status": "PASS",
+  "worst_pullin_time_s": 6.24,
+  "worst_doppler_rms_hz": 0.1310181698330171,
+  "worst_doppler_p95_hz": 0.23090735,
+  "worst_code_phase_p95_chips": 0.02048893,
+  "note": "Results predate the target-only catalog change; commit 503cdea freezes the tested implementation."
+}

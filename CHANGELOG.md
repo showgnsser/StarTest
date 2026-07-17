@@ -1,5 +1,21 @@
 # Changelog
 
+## Pull-in Qualification v2
+
+### Published
+
+- 发布 GPS L1CA、BDS B1I、GPS L5 三信号固定五种子牵引结果。
+- GPS L1CA 在 22 dB-Hz 下 35/35 个正式组合通过。
+- BDS B1I 在 24 dB-Hz 下 35/35 个正式组合通过。
+- GPS L5 在 28 dB-Hz 下 5/5 个边界组合通过。
+- 每个信号均包含公开 1 Hz 观测、状态事件、汇总指标和两张结果图。
+
+### Aligned
+
+- 已知电文辅助持续灵敏度目标统一调整为 7 dB-Hz / -163 dBm。
+- 旧 3 dB-Hz 探索结果仍保留在 `legacy/`，不作为当前正式指标。
+- 尚未按新目标运行的持续、动态和耐久案例继续明确标记为待运行。
+
 ## Fixed Qualification Suite v1
 
 ### Reorganized

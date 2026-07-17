@@ -1,0 +1,13 @@
+scenario,time_s,frame_id,event,from_state,to_state,command_id
+pullin_28db_fp31p25_cp0p3,0.56000000,28,SyncReady,PullIn,PullIn,28
+pullin_28db_fp31p25_cp0p3,1.94000000,97,StateRequested,PullIn,Lock,98
+pullin_28db_fp31p25_cp0p3,1.96000000,98,StateCommitted,PullIn,Lock,98
+pullin_28db_fp31p25_cp0p3,1.96000000,98,TrackingReady,PullIn,Lock,98
+pullin_28db_fp31p25_cp0p3,3.46000000,173,StateRequested,Lock,Strong,174
+pullin_28db_fp31p25_cp0p3,3.48000000,174,StateCommitted,Lock,Strong,174
+pullin_28db_fp31p25_cp0p3,10.92000000,546,StateRequested,Strong,LongFast,547
+pullin_28db_fp31p25_cp0p3,10.94000000,547,StateCommitted,Strong,LongFast,547
+pullin_28db_fp31p25_cp0p3,14.12000000,706,StateRequested,LongFast,LongLock,707
+pullin_28db_fp31p25_cp0p3,14.14000000,707,StateCommitted,LongFast,LongLock,707
+pullin_28db_fp31p25_cp0p3,17.32000000,866,StateRequested,LongLock,Medium,867
+pullin_28db_fp31p25_cp0p3,17.34000000,867,StateCommitted,LongLock,Medium,867

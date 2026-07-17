@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "git_sha": "503cdeae75a8a9cd15acbc876eac5334be7d892e",
+  "profile_version": "pullin-v2",
+  "run_timestamp": "2026-07-17T09:46:14.205503+08:00",
+  "case_id": "ST-GPSL5-01-PULL_IN_SENSITIVITY",
+  "seeds": [
+    20260716,
+    20260717,
+    20260718,
+    20260719,
+    20260720
+  ],
+  "source_campaign": "l5_qualification_boundary",
+  "target_cn0_db_hz": 28.0,
+  "required_combinations": 5,
+  "passed_combinations": 5,
+  "status": "PASS",
+  "worst_pullin_time_s": 2.2,
+  "worst_doppler_rms_hz": 0.03418894409404512,
+  "worst_doppler_p95_hz": 0.06454342,
+  "worst_code_phase_p95_chips": 0.02098743,
+  "note": "Results predate the target-only catalog change; commit 503cdea freezes the tested implementation."
+}
