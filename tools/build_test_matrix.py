@@ -71,8 +71,8 @@ def render():
             "",
             "## {}".format(signal_root.name),
             "",
-            "| 固定案例 | 时长 | 种子数 | 三项目标 | 最新版本 | 结果 | 详情 |",
-            "|---|---:|---:|---|---|---|---|",
+            "| 固定案例 | 正式时长 | 最新/计划种子 | 三项目标 | 最新版本 | 运行类型 | 结果 | 详情 |",
+            "|---|---:|---:|---|---|---|---|---|",
         ])
         for case_root in sorted(path for path in signal_root.iterdir()
                                 if path.is_dir()):
@@ -80,13 +80,17 @@ def render():
             run, summary = latest_run(case_root / "runs")
             run_name = run.name if run is not None else "-"
             link = (case_root / "README.md").relative_to(ROOT).as_posix()
+            latest_seed_count = len(summary.get("seeds", []))
+            planned_seed_count = len(scenario.get("seeds", []))
+            seed_text = "{}/{}".format(latest_seed_count,
+                                         planned_seed_count)
+            run_type = summary.get("test_set", "-")
             lines.append(
-                "| `{}` | {:g} s | {} | {} | `{}` | {} | [查看]({}) |".
+                "| `{}` | {:g} s | {} | {} | `{}` | {} | {} | [查看]({}) |".
                 format(
                     scenario.get("case_id", case_root.name),
                     float(scenario.get("duration_s", 0.0)),
-                    len(scenario.get("seeds", [])),
-                    target_text(scenario), run_name,
+                    seed_text, target_text(scenario), run_name, run_type,
                     status_text(summary), link))
     lines.append("")
     return "\n".join(lines)

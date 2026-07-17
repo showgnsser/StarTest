@@ -1,0 +1,2 @@
+﻿"scenario","seed","status","duration_s","pullin_time_s","doppler_rms_hz","doppler_p95_hz","rate_p95_hz_s","code_phase_p95_chips","cn0_bias_db","cn0_rmse_db","cn0_valid_ratio","fallback_to_pullin_count","transition_divergence_count"
+"slow_fade_strong_deep_strong","20260716","PASS","300.0","1.48","4.125999220024137","5.32390016","0.0324862","0.10924922","-3.9185077155445547","4.769800475369","1.0","0","0"

@@ -1,5 +1,21 @@
 # Changelog
 
+## GPS L1CA Development Matrix v3
+
+### Published
+
+- 发布 `StarTrack 0795a62` 的 GPS L1CA 单种子 Development 回归，覆盖牵引、持续跟踪、多普勒动态、强弱阶跃、缓慢遮挡和门限迟滞七类固定场景。
+- 每个场景提供 1 Hz 公开观测、状态事件、汇总指标和结果图；不公开内部环路参数、原始相关量或 20 ms 调试日志。
+- 22 dB-Hz 牵引七组代表性移交组合全部通过，30 和 40 dB-Hz 的 PullIn 退出时间均低于 2 秒。
+- 10 dB-Hz 无电文辅助与 7 dB-Hz 已知电文辅助持续跟踪通过 240 秒开发回归。
+- 30 dB-Hz 支持 1 Hz/s，10 dB-Hz 支持 0.25 Hz/s；7 dB-Hz 与 1 Hz/s 的失败结果作为动态边界保留。
+
+### Aligned
+
+- GPS L1CA、BDS B1I、GPS L5 的无电文辅助持续灵敏度目标统一更新为 `10 dB-Hz / -160 dBm`。
+- 本次仅完成 GPS L1CA 单种子 Development 回归，不将结果表述为五种子 Qualification 结论。
+- 一小时耐久测试仍按开发计划暂缓，不以短场景替代耐久结论。
+
 ## Pull-in Qualification v2
 
 ### Published

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "git_sha": "0795a62ddd0efcf81c7c7d3978c6155edc7a5883",
+  "profile_version": "l1ca-v3",
+  "profile_sha256": "9e5548f462957ff1a14687ab8162426d01005533fb8e0e11ec0d3963a8d16283",
+  "startrack_binary_sha256": "0df026c208f9c3cd81bba8dbc4dd82f9e1fa1a42ac3c224117b2318ab1451a4e",
+  "stargen_binary_sha256": "bc89dd1f5879541fe415183d44906207f4951e7f024a3dc648f1a0cf39f513fd",
+  "run_timestamp": "2026-07-17T18:05:43+08:00",
+  "case_id": "ST-GPSL1CA-07-THRESHOLD_HYSTERESIS",
+  "test_set": "Development",
+  "seeds": [20260716],
+  "status": "PASS",
+  "completed_scenarios": 1,
+  "passed_scenarios": 1,
+  "conclusion": "门限附近往返变化未触发重捕或持续状态振荡。"
+}
